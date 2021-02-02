@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subreddit</title>
+</head>
+
+<body>
+    <h1>browsing the <%= name %> subreddit</h1>
+    <h3>
+        <%= description %>
+    </h3>
+    <p>Number of subscribers: <%= subscribers %>
+    </p>
+    <hr>
+
+    <% for (let post of posts) {%>
+        <section>
+            <p>
+                <%= post.title %> - <b>
+                        <%= post.author %>
+                    </b>
+                    <% if(post.img){ %>
+                        <img src="<%= post.img %>" height="200px" width="200px" style="display: block;">
+                        <% } %>
+            </p>
+
+
+
+            <% } %>
+        </section>
+</body>
+
+</html>

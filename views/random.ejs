@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The random number is: <%= rand %>
+    </h1>
+    <!-- Two methods for inserting an if statement:  -->
+    <!-- This first one is called a ternary operator. -->
+    <p>The number above is an <%= rand%2===0 ? 'even' : 'odd' %> number.</p>
+    <% if(rand % 2===0){ %>
+        <p>The number above is an even number.</p>
+        <% } else { %>
+            <p>The number above is an odd number.</p>
+            <% } %>
+</body>
+
+</html>
